@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+    <link rel="icon" href="/imagens/icon.png">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/main.js" defer></script>
+</head>
+<body class="bory">
+    <header>
+        
+        <div class="cabeçalho">
+          
+            <h1 class="logo"> 
+                <a href="/index.html"><img src="/imagens/logo.png" alt="">
+                </a>
+            </h1>
+    
+            <h1 class="titulo"> 
+                Desafios 7daysOfCode
+            </h1>
+            
+        </div>
+        <h2>Day 2</h2>
+    </header>   
+      <main >
+        <div class="pergunta">
+            <h1 class="pergunta_titulo" >desenvolver um programa simulando um desses sites. Ele deve pedir para o usuário responder 3 perguntas:</h1>
+            <ul class="lista">
+                <li class="pergunta_dados"> - Qual o seu nome? </li>
+                <li class="pergunta_dados">- Quantos anos você tem?</li>
+                <li class="pergunta_dados">- Qual linguagem de programação você está estudando?</li>
+            </ul>
+            <span class="pergunta_-corpo">
+                <br>À medida que as perguntas forem sendo feitas, a pessoa que estiver usando o programa deve responder cada uma delas.
+                <br> No final, o sistema vai exibir a mensagem:
+                <br>   
+                <br> "Olá [nome], você tem [idade] anos e já está aprendendo [linguagem]!"
+                <br>       
+                <br> Note que cada informação entre [ ] é uma das respostas dadas pela pessoa.</span>
+                <h2>Resposta:</h2>
+                <p class="resposta">segue abaixo a resolução do desafio 2 proposto</p>
+                     
+        </div>
+        <div>
+            <form id="form" class="formulario">
+                <label for="nome">Qual o seu nome?</label>
+                <input id="nome" class="inputFormulario" type="text" placeholder="Digite seu Nome" required="">
+                <label for="idade">Qual sua idade</label>
+                <input id="idade" class="inputFormulario" type="text" placeholder="Digite sua idade"  required="">
+                <label for="linguagem">Qual linguagem esta aprendendo?</label>
+                <input id="linguagem" class="inputFormulario" type="text" placeholder="ex: JavaScript" required="">
+                
+                <button id="btnEnviar" class="enviar" type="button" onclick=" capturar ()">Enviar</button>
+                <p id="resultado" class="resposta" > Preencha o formualario acima </p>
+                
+            </form>    
+        </div>
+      </main>
+      <footer>
+          
+          <div class="rodaPe">    
+            <div class="autor">
+                  <h2>Autor</h2>
+                  <p>Claudinei Martins de Jesus</p>
+    
+                </div>
+                <div class="linha-separadora"></div>
+                
+                <div class="contato">
+                  <h2>Contato</h2>
+                  <p>Linkedin</p>
+                  <a href="https://www.linkedin.com/in/claudinei-martins-97697a208/" target="_blank" rel="noopener noreferrer"><img class="linkedi-icon" src="/imagens/linkedin.png" alt=""></a>
+                      
+              </div>
+    
+          </div>
+      </footer>
+    
+</body>
+</html>
