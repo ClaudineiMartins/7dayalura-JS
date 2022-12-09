@@ -25,8 +25,40 @@
             
         </div>
         <h2>Day 4</h2>
+        
     </header>   
       <main >
+        <div class="pergunta">
+            <h1 class="pergunta_titulo" > Adivinhar o numero
+
+            </h1>
+            <span class="pergunta_-corpo">
+                <p class="pergunta_-corpo">
+                    Você já brincou de tentar adivinhar o número que seu amigo ou amiga estava pensando? Hoje você vai voltar na infância e fazer exatamente isso. Mas agora, o jogo vai ser contra o próprio computador! <br>
+                    <br> Você deve criar um programinha que comece com um valor específico pré-definido entre 0 a 10 para o número que você vai adivinhar (7, por exemplo).
+                    Em seguida, o programa vai perguntar para você qual o valor que você deseja chutar e, caso você acerte, ele irá te parabenizar. Caso erre, ele vai te dar mais 2 tentativas.
+                    No fim, caso você não acerte nenhuma vez, ele vai imprimir qual era o número inicial.<br>
+                    <br> Depois que o programinha estiver funcionando, tente usar um número randômico em vez de um número pré-definido.
+
+
+                    
+                </p>
+
+                
+
+            </span>
+
+            <h2>Resposta:</h2>
+            <p id="inicioJogo">
+                Vamos iniciar! toque em jogar: 
+            </p>
+            <button class="enviar" onclick="inciarJogo()">
+                Jogar
+            </button>
+            <input id="numeroAdivinhado" type="number" placeholder="tente adivinhar">
+            <P id="resposta"></P>
+            <button id="adivinhar" class="enviar" onclick="adivinharNumero()">Adivinhar</button>
+        </div>
         
           
       </main>
