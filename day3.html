@@ -49,15 +49,33 @@
                     <fieldset>
                         <legend>Qual area pretende seguir?</legend>
                         <label for="radio-frontend">
-                            <input type="radio" id="radio-frontend" name="area" value="Front-End">
+                            <input onclick="clicouRadio(1)" type="radio" id="radio-frontend" name="area" value="Front-End">
                             Front-End
                         </label>
                         <label for="radio-Backend">
-                            <input type="radio" id="radio-Backend" name="area" value="Back-End">
+                            <input onclick="clicouRadio(2)" type="radio" id="radio-Backend" name="area" value="Back-End">
                             Back-End
                         </label>
                         <p id="resultado">Escolha uma opção entre Front-Ende Back-End</p>
                     </fieldset>
+                        
+                    <fieldset>
+                        <legend>Voce pretende se especializar na Area ou se tornar um desenvolvedor Fullstack?</legend>
+                        <label for="meEspecializar">
+                            <input onclick="" type="radio" id="meEspecializar" name="especilizar" value="meEspecializar">
+                            Me Especializar
+                        </label>
+                        <label for="Fullstack">
+                            <input onclick="" type="radio" id="Fullstack" name="especilizar" value="Fullstack">
+                            Fullstack
+                        </label>
+                    </fieldset>
+                    <div class="adicionarTecnologia">
+                        <textarea  id="adicionarTech" name="" cols="50" rows="2"  placeholder="Tem mais alguma tecnologia que você gostaria de aprender?"></textarea>
+                        <button  onclick="adicionaEscolha()" class="enviar">adicionar</button>
+                        <p id="quaisTecnologias" >Digite na area acima para que as tecnologias sejam listadas abaixo!</p>
+                        <p id="tecnologiasEscolhidas"></p>
+                    </div>    
                 </span>
                 
             </div>
