@@ -1,7 +1,7 @@
 .bory{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    background: linear-gradient(#000, rgb(0, 0, 0));
+    background: linear-gradient(#000,#000000);
     
 }
 h1::selection{
@@ -53,8 +53,7 @@ i::selection{
     color: white;
     margin-left: 40px;
 }
-/* .vazio{
-    height: 420px; */
+
 
 /*Pagina de desafios*/
 h2{
@@ -65,22 +64,31 @@ h2{
     padding: 20px 0px;
 }
 .pergunta_titulo {
-    padding: 20px 0px;
+    margin: 20px auto;
     font-size: 1.5em;
     font-weight: bold;
+    text-align: center;
 }
 .pergunta_dados{
     margin-left: 45%;
     margin-top: 5px;
     
 }
-.pergunta_-corpo {
-    margin: 20px;
+
+    
+   
+
+
+p.pergunta_-corpo{
+    width: 600px;
+    margin: 0px auto;
+    text-align: justify;
+
 }
 .resposta{
     color: white;
     text-align: center;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;   
 }
 .codepen{
     margin: 20px 0px 200px 0px;
@@ -103,6 +111,13 @@ label {
     border: solid #F9FF00 .5px;
     margin: auto;
     width: 200px;
+    
+}
+textarea{
+    margin-top: 8px;
+    resize: none;
+    border:solid 1px #F9FF00 ;
+    background-color: #f1f1e9;
     
 }
 button.enviar{
