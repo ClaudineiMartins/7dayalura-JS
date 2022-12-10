@@ -1,3 +1,5 @@
+/*---------------------------DAY 2---------------------------*/
+
 function capturar(){
     var nome = document.getElementById("nome").value;
     var idade = document.getElementById("idade").value;
@@ -6,6 +8,8 @@ function capturar(){
     document.getElementById("resultado").innerHTML = resultado;
 }
 
+/*---------------------------DAY 2 fim---------------------------*/
+/*---------------------------DAY 3---------------------------*/
 
 function clicouRadio(opcao) {
     resultado = document.getElementById("resultado");
@@ -17,7 +21,6 @@ function clicouRadio(opcao) {
 }
 
 
-
 function adicionaEscolha() {
     tecnologiasEscolhidas = document.getElementById("tecnologiasEscolhidas");
     tecnologiasEscolhidas.innerHTML +=
@@ -27,9 +30,7 @@ function adicionaEscolha() {
       "Voce pode continuar digitando! Tem mais alguma tecnologia que você quer aprender ?";
     document.getElementById("adicionarTech").value = " ";
 }
-
-
-
+/*---------------------------DAY 3 fim---------------------------*/
 /*---------------------------DAY 4---------------------------*/
 /*Para function advinharNumero()*/
 var errou =0;
@@ -56,7 +57,7 @@ function adivinharNumero (){
         document.getElementById("inicioJogo").innerHTML="Parabens!!! voce acertou.🎉🎆"
     }
     else{
-        document.getElementById("inicioJogo").innerHTML="Que pena 😢, voce tem mais "+ (2-errou) + " tentativas"
+        document.getElementById("inicioJogo").innerHTML="Que pena 😢, voce tem mais "+ (2-errou) + " tentativas, o numero era " + numMaquina;
         errou++;
     }
     
@@ -69,4 +70,4 @@ function adivinharNumero (){
        
     
 }
-/*---------------------------DAY 4---------------------------*/
+/*---------------------------DAY 4 fim---------------------------*/
