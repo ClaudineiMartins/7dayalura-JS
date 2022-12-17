@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Day 5</title>
     <link rel="icon" href="/imagens/icon.png">
-    <link rel="stylesheet" href="https://https://claudineimartins.github.io/7dayalura/reset.css">
-	  <link rel="stylesheet" href="https://claudineimartins.github.io/7dayalura/style.css">
-	    <script type="text/javascript" src="/https://claudineimartins.github.io/7dayalura/main.js" defer></script>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/main.js" defer></script>
 </head>
 <body class="bory">
     <header>
@@ -16,18 +16,80 @@
         <div class="cabeçalho">
           
             <h1 class="logo"> 
-                <a href="https://claudineimartins.github.io/7dayalura/"><img src="https://claudineimartins.github.io/7dayalura/logo.png" alt="">
+                <a href="/index.html"><img src="/imagens/logo.png" alt="">
                 </a>
             </h1>
     
             <h1 class="titulo"> 
                 Desafios 7daysOfCode
             </h1>
+        
             
         </div>
         <h2>Day 5</h2>
     </header>   
       <main >
+        <div class="pergunta">
+            <h1 class="pergunta_titulo" >
+                 Lista de compras
+            </h1>
+            <span class="pergunta_-corpo"> 
+                <p class="pergunta_-corpo">
+                    Então hoje, para facilitar a sua ida ao supermercado, você deve criar um programa em Javascript que perguntará se você deseja adicionar uma comida na sua lista de compras, e você deve poder responder com sim ou não.
+                    <br>
+                    <br>Em seguida, ele perguntará qual comida você deseja inserir, e você digitará o nome dela, como por exemplo batata.
+                    <br>
+                    <br>Depois, ele deverá perguntar em qual categoria essa comida se encaixa, com algumas opções já pré-definidas, como frutas, laticínios, congelados, doces e o que mais você achar interessante. Assim, você poderá separar tudo no seu devido grupo.
+                    <br>
+                    <br>Por fim, caso você não queira mais adicionar nada na lista de compras e responder não na primeira pergunta, ele irá exibir uma lista com todos os itens agrupados, da seguinte forma:
+                    <br>
+                    <br>Caso você adicione na sua lista:
+                    <br>banana, leite em pó, tomate, leite vegetal, chiclete, bala de ursinho, maçã, uva, abacate e leite de vaca
+                    <br>
+                    <br> O programa deverá imprimir, por exemplo:
+                    <br>
+                    <br>Lista de compras:
+                    <br>Frutas: banana, tomate, maçã, uva, abacate
+                    <br>Laticínios: leite vegetal, leite de vaca, leite em pó
+                    <br>Congelados:
+                    <br>Doces: chiclete e bala de ursinho
+                    
+                </p>
+                <h2>Resposta:</h2>
+                <p class="resposta">segue abaixo a resolução do desafio proposto</p>
+                <p 
+                
+                class="erro"></p>
+                <p> Selecione a categoria de seu produto:</p>
+                <select 
+                id="categoria" >
+                    <option value="nenhum"></option>
+                    <option value="frutas">frutas</option>
+                    <option value="Laticínios">Laticínios</option>
+                    <option value="Congelados">Congelados</option>
+                    <option value="Doces">Doces</option>
+                     
+                </select>
+                <input 
+                    disabled
+                    id="txtListaCompras"
+                    type="text" 
+                    placeholder=" Digite um item para adicionar a Lista de compras" 
+                    size="50">
+
+                <button 
+                class="enviar" >
+                    enviar
+                </button>
+                <div id="lista">
+
+                </div>
+            </span>
+
+
+        </div>
+
+
         
           
       </main>
