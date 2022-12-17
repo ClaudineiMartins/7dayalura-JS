@@ -1,59 +1,233 @@
-body {
-	background-color: #000;
+.bory{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background: linear-gradient(#000,#000000);
+    
+}
+h1::selection{
+    background: #F9FF00;
+    color: #000;
+
+}
+li::selection{
+    background: #F9FF00;
+    color: #000;
+
+}
+p::selection{
+    
+    background: #F9FF00;
+    color: #000;
+
+}
+h2::selection{
+    background: #F9FF00;
+    color: #000;
+    
 }
 
-h2, p, label {
-	color: #fcfcfc;
-	font-family: 'Verdana',sans-serif;
+i::selection{
+    background: #F9FF00;
+    color: #000;
+    
+}
+.cabeçalho{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    margin: 0 40px;
+    font-size: 2em;
+    text-decoration: none;
+    
+}
+.logo {
+    padding: 20px;
+}
+.titulo {
+    
+    padding: 40px;
+    color: #F9FF00;
+    font-weight:bold;
+}
+.pergunta {
+    width: 600px;
+    color: white;
+    margin: 0 auto;
 }
 
-h2 {
-	text-align: center;
+
+/*Pagina de desafios*/
+h2{
+    font-size: 1.5em;
+    color: #F9FF00;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0px;
+}
+.pergunta_titulo {
+    margin: 20px auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+.pergunta_dados{
+    margin-left: 45%;
+    margin-top: 5px;
+    
 }
 
-p {
-	margin: 10px 0px 0px 0px;
+    
+   
+
+
+p.pergunta_-corpo{
+    
+    text-align: justify;
+
+}
+.resposta{
+    color: white;
+    text-align: center;
 }
 
-button {
-	margin-top: 10px;
+
+#lista{
+    display: flex;
+    flex-direction: column;
 }
 
-.section {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+
+.codepen{
+    margin: 20px 0px 200px 0px;
+}
+form.formulario {
+    
+    color: white;
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: solid #F9FF00 1px;
+    border-radius: 30px;
+}
+label {
+    margin: 10px auto;
+}
+.inputFormulario{
+    color: #68685c;
+    border: solid #F9FF00 .5px;
+    margin: auto;
+    width: 200px;
+    
+}
+textarea{
+    margin-top: 8px;
+    resize: none;
+    border:solid 1px #F9FF00 ;
+    background-color: #f1f1e9;
+    
+}
+button.enviar{
+    border-radius: 3px;
+    border: none;
+    background-color: #F9FF00;
+    margin: 15px auto;
+    width: 100px;
+}
+button.enviar:hover{
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+    background-color: #545506;
+    color: white;
 }
 
-.wrapper {
-	display: flexbox;
-	width: 250px;
-	background-color: #1D1E22;
-	padding: 25px;
-	flex-direction: column;
-	border-radius: 5px;
-	border: solid 1px #fff;
+/*Pagina Inicial*/
+ul.desafioLista {
+    width: 600px;    
+    margin:107px auto;
+    display: flex; 
+    flex-wrap: wrap;
+
+}
+.desafioLista-link {
+    
+    width: 120px;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+ 
 }
 
-.wrapper input {
-	width: 100%;
+.desafioLista a {
+
+    color: #F9FF00;
+    
+}
+.botao-link {
+    background: #F9FF00;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    font-weight: bold;
+    
+}
+.botao-link:hover {
+    background: #545506;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    transition: 0.5s;
 }
 
-#listaCompras div {
-	display: flex;
-	flex-wrap: wrap;
+.rodaPe {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    position:static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #68685c;
+    color: white;
+    text-align: center;
 }
 
-#listaCompras h2 {
-	flex-basis: 100%;
+
+div.autor{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-right: solid rgb(121, 116, 116) 1px ;
+       
+
+
+}
+.autor h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 90px;
 }
 
-#listaCompras div input {
-	width: 10px;
-	margin-right: 15px;
-	flex-basis: 10%;
+.contato {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+}
+.contato h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 90px;
 }
 
-#listaCompras div label {
-	flex-basis: 80%;
-}
+.linkedi-icon{
+   max-width: 25px;
+   max-height: 25px;  
+   margin-top: 5px;
+     
+} 
