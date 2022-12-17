@@ -1,73 +1,55 @@
-/*---------------------------DAY 2---------------------------*/
+const itemName = document.getElementById('itemName');
+const itemSector = document.getElementById('itemSector');
+const listaCompras = document.getElementById('listaCompras');
+let shoppingList = [];
+let sectors = [];
 
-function capturar(){
-    var nome = document.getElementById("nome").value;
-    var idade = document.getElementById("idade").value;
-    var linguagem = document.getElementById("linguagem").value;
-    var resultado = 'Ola,  ' + nome + ' voce tem  ' + idade + ' anos e ja esta aprendendo ' + linguagem;
-    document.getElementById("resultado").innerHTML = resultado;
+function handleAdd(){
+	makeItem(itemName.value,itemSector.value);
+	// itemName.value =''; 
+	// itemSector.value = '';
+	printItems();
 }
 
-/*---------------------------DAY 2 fim---------------------------*/
-/*---------------------------DAY 3---------------------------*/
-
-function clicouRadio(opcao) {
-    resultado = document.getElementById("resultado");
-    if (opcao == 1) {
-        resultado.innerHTML = "Você deve aprender React ou Vue";
-    } else {
-        resultado.innerHTML = "Você deve aprender C# ou Java";
-    }
+function makeItem(nome,setor){
+	let item = {
+		name: nome,
+		sector: setor
+	}
+	shoppingList.push(item);
+	addSector(item.sector);
 }
 
-
-function adicionaEscolha() {
-    tecnologiasEscolhidas = document.getElementById("tecnologiasEscolhidas");
-    tecnologiasEscolhidas.innerHTML +=
-      " , " + document.getElementById("adicionarTech").value;
-  
-    document.getElementById("quaisTecnologias").innerHTML =
-      "Voce pode continuar digitando! Tem mais alguma tecnologia que você quer aprender ?";
-    document.getElementById("adicionarTech").value = " ";
+function addSector(sec){
+	if (sectors.includes(sec) == false){
+		sectors.push(sec);
+	}
 }
-/*---------------------------DAY 3 fim---------------------------*/
-/*---------------------------DAY 4---------------------------*/
-/*Para function advinharNumero()*/
-var errou =0;
-var chances = 3;
 
+function printItems(){
+	listaCompras.innerHTML = '';
+	// para cada setor, cria a div e o título do setor;
+	for (let i=0; i<=sectors.length; i++){
+		let sectorDiv = document.createElement('div');
+		sectorDiv.id = sectors[i];
+		sectorDiv.innerHTML = `<h2>${sectors[i]}</h2>`;
+		listaCompras.appendChild(sectorDiv);
+		
+		// ainda no laço for, para cada item na lista que seja daquele setor, insere o checkbox e label do item
+		shoppingList.filter((element) => {
+			if (element.sector == sectors[i]){
 
-
-function inciarJogo() {
-    document.getElementById("inicioJogo").innerHTML=" 🤖 Pensei em um numero entre 0 e 5, tente adivinhar. (Voce tem 3 tentativas) "
-    if (errou-chances==0 ){
-        document.querySelector("#adivinhar").disabled=false;
-        errou=0;
-    }
-}  
-
-
-function adivinharNumero (){
-    var numMaquina = (Math.floor(Math.random() * 6));
-    console.log("numero maquina "+ numMaquina);
-    var chute= document.getElementById("numeroAdivinhado").value;
-    var VerificaTentativa = (numMaquina ==chute);
-
-    if(VerificaTentativa ==true  ){
-        document.getElementById("inicioJogo").innerHTML="Parabens!!! voce acertou.🎉🎆"
-    }
-    else{
-        document.getElementById("inicioJogo").innerHTML="Que pena 😢, voce tem mais "+ (2-errou) + " tentativas, o numero era " + numMaquina;
-        errou++;
-    }
-    
-
-    if (errou-chances==0 ){
-        document.querySelector("#adivinhar").disabled=true
-    }
-    
-    console.log(errou);
-       
-    
+				let listItem = document.createElement('input');
+				listItem.type='checkbox';
+				listItem.id=`${element.name}`;
+				listItem.value=`${element.name}`;
+				let listLabel = document.createElement('label');
+				listLabel.setAttribute('for',element.name);
+				listLabel.innerHTML = `${element.name}`;
+				let itemLocation = document.getElementById(element.sector);
+				itemLocation.appendChild(listItem);
+				itemLocation.appendChild(listLabel);
+			};
+		})
+	}
 }
-/*---------------------------DAY 4 fim---------------------------*/
