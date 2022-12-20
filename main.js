@@ -56,6 +56,7 @@ function desblokAdivinhar(){
         document.querySelector("#adivinhar").disabled=true;
 
     }
+    
 }
 addEventListener("keyup", desblokAdivinhar)
 
