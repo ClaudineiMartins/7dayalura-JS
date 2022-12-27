@@ -24,11 +24,9 @@ categoria.addEventListener("click", LiberarInput)
 botaoEnviar.disabled=true;
 function LiberarEnviar (){
     if ((inputLista.value =="")){
-        console.log('pass')
         botaoEnviar.disabled=true;
     }
     else{
-        console.log('nao')
         botaoEnviar.disabled=false;
         
     }
@@ -83,12 +81,18 @@ function imprimirItens (){
                 itemLista.type = 'checkbox';
                 itemLista.id = `${element.nome}`;
                 itemLista.value = `${element.nome}`;
+                
                 var listaLabel = document.createElement('label');
                 listaLabel.setAttribute('for', element.nome);
                 listaLabel.innerHTML = `${element.nome}`;
+
+                let produtos = document.createElement('div');
+                produtos.className="produtos";
                 let localizacaoLista = document.getElementById(element.setor);
-                localizacaoLista.appendChild(itemLista);
-                localizacaoLista.appendChild(listaLabel);
+                
+                localizacaoLista.appendChild(produtos);
+                produtos.appendChild(itemLista);
+                produtos.appendChild(listaLabel);
             }
         })
     }

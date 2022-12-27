@@ -3,6 +3,7 @@ const botaoEnviar = document.querySelector(".enviar");
 let categoria = document.querySelector("#categoria");
 let inputLista = document.querySelector("#txtListaCompras");
 const divLista = document.getElementById("lista");
+let bntExcluir = document.querySelector(".excluir")
 let itemsLista = [];
 let arrCategoria = [];
 
@@ -69,9 +70,13 @@ function adicionarCategoria (cat){
 }
 
 function removerItens (){
-    let elementChecked = document.querySelectorAll('input[type="checkbox"]:checked');
-    console.log(elementChecked);
-}
+    const elementChecked = document.querySelector('input[type="checkbox"]:checked').value;
+    const indice = itemsLista.map(element => element.nome).indexOf(elementChecked);
+    itemsLista.splice(indice, 1);
+    imprimirItens();
+
+    }
+bntExcluir.addEventListener("click", removerItens);
 
 function imprimirItens (){
     divLista.innerHTML = "";
