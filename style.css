@@ -1,7 +1,6 @@
 .bory{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
     background: linear-gradient(#000,#000000);
+    font-family: 'Poppins', sans-serif;
     
 }
 h1::selection{
@@ -148,6 +147,7 @@ div.calculadora{
     width: 375px;
     height: 812px;
     border-radius: 39px;
+    box-shadow: -30px 20px 70px 5px  #60BEFF;
 }
 
 div.tela{
@@ -155,6 +155,7 @@ div.tela{
 
 }
 div div h2#Calc-Resultados{
+    
     font-size: 48px;
     text-align: right;
     color:#424242;
@@ -181,13 +182,14 @@ div .container{
 
 }
 div ul.buttons-especiais{
-    
     display: flex;
     margin-top: 0px;
 }
 ul li.teclas button.especiais{
-    background-color: #303136;
-    color: #29A8FF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #7CC9FF;
     margin: 0px 20px 0px 0px ;    
     border-radius: 24px;
     height: 40px;
@@ -208,10 +210,10 @@ ul li.teclas button.especiais{
 }
 
 ul li.teclas button.buttons{
+    font-family: 'Poppins', sans-serif;
     background-color: #FFFFFF;
     color: #109DFF;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 32px;
     padding: 0px;
     width: 62px;
     height: 62px;
@@ -221,8 +223,8 @@ ul li.teclas button.buttons{
     
 }
 ul li.teclas button.button-divisao{
-    font-size: 16px;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
     background-color: #ADE2FF;
     color: #109DFF;
     padding: 0px;
@@ -281,7 +283,9 @@ ul li.teclas button.button-divisao{
     left: -5px
 }  
 ul li.teclas button.button-Limpar{
-    background-color: #616161;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    background-color: #FFFFFF;
     color: #A5A5A5;
     padding: 0px;
     width: 62px;
@@ -294,8 +298,7 @@ ul li.teclas button.button-Limpar{
 ul li.teclas button.buttons-comprido{
     background-color: #FFFFFF;
     color: #109DFF;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 32px;
     padding: 0px;
     width: 144px;
     height: 62px;
@@ -309,6 +312,7 @@ height: 396px;
 }
 
 ul li.teclas button.operador{
+font-size: 32px;
 background-color: #ADE2FF;
 color: #109DFF;
 width: 62px;
@@ -320,6 +324,7 @@ border: none;
 
 }
 ul li.teclas button.operador-alto {
+    font-size: 32px;
     color: #109DFF;
     background-color: #ADE2FF;
     padding: 0px;
@@ -329,7 +334,58 @@ ul li.teclas button.operador-alto {
     border-radius: 16px;
     border: none;
     
-    }
+}
+ul li.teclas button.operador-igual {
+    font-size: 32px;
+    color: #FFFFFF;
+    background-color: #1991FF;
+    padding: 0px;
+    width: 62px;
+    height: 104px;
+    margin-top: 16px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: -9px 13px 23px 5px  #19ACFF;
+    
+}
+ul li.teclas button.operador-igual:hover, 
+ul li.teclas button.operador-alto:hover, 
+ul li.teclas button.operador:hover,
+ul li.teclas button.buttons-comprido:hover,
+ul li.teclas button.button-Limpar,
+ul li.teclas button.especiais:hover,
+ul li.teclas button.buttons:hover,
+ul li.teclas button.button-divisao:hover
+{
+    cursor: pointer;
+    opacity: 0.8;
+}
+ul li.teclas button.operador-igual:active
+{
+    background-color: #FFFFFF;
+    color: #109DFF;
+    border: #109DFF solid 1px;
+}
+ul li.teclas button.operador-alto:active,
+ul li.teclas button.operador:active,
+ul li.teclas button.button-divisao:active{
+    background-color: #109DFF;
+    color: #ADE2FF;
+}
+ul li.teclas button.buttons:active,
+ul li.teclas button.buttons-comprido:active,
+ul li.teclas button.especiais:active{
+    background-color: #109DFF;
+    color: #FFFFFF;
+}
+ul li.teclas button.button-Limpar:active{
+    background-color: #7f8080;
+    color: #FFFFFF;
+}
+/* ul li.teclas button.especiais:active{
+    background-color: #109DFF;
+    color: #303136;
+} */
 
 
 
@@ -359,6 +415,7 @@ ul.desafioLista {
     
 }
 .botao-link {
+    font-family: 'Poppins', sans-serif;
     background: #F9FF00;
     border-radius: 6px;
     width: 100%;
@@ -367,7 +424,6 @@ ul.desafioLista {
     cursor: pointer;
     color: rgb(0, 0, 0);
     font-size: 1em;
-    font-weight: bold;
     
 }
 .botao-link:hover {
@@ -388,7 +444,7 @@ ul.desafioLista {
     background-color: #68685c;
     color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 
