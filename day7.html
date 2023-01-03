@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@100&display=swap" rel="stylesheet"> 
-    <script src="/scripts/day7.js"></script>
+    <script defer src="/scripts/day7.js"></script>
 </head>
 <body class="bory">
     <header>
@@ -47,41 +47,41 @@
                     <p class="resposta">segue abaixo a resolução do desafio proposto</p>
                     <div class="calculadora">
                         <div class="tela" >
-                            <h3 class="equacao">Ex: 6000/3*2+544</h3>
-                            <h2 id="Calc-Resultados"> =123123,5</h2>
+                            <h3 data-operacao-anterior class="equacao"></h3>
+                            <h2 data-operacao-atual id="Calc-Resultados"> </h2>
                         </div>
                         <div class="calc-Teclado">
                             <ul class="buttons-especiais">
-                                <li class="teclas"><button value="e" class="especiais">e</button></li>
-                                <li class="teclas"><button value="µ" class="especiais">µ</button></li>
-                                <li class="teclas"><button value="sin" class="especiais">sin</button></li>
-                                <li class="teclas"><button value="deg" class="especiais">deg</button></li>
+                                <li class="teclas"><button data-especiais value="e" class="especiais">e</button></li>
+                                <li class="teclas"><button data-especiais value="µ" class="especiais">µ</button></li>
+                                <li class="teclas"><button data-especiais value="sin" class="especiais">sin</button></li>
+                                <li class="teclas"><button data-especiais value="deg" class="especiais">deg</button></li>
                                 
                             </ul>
                         <div class="container">
                             <ul class="numerais">
-                                <li class="teclas"><button value="Ac" class="button-Limpar">Ac</button></li>
-                                <li class="teclas"><button value="" class="button-Limpar"><i class="gg-backspace"></i></button></li>
-                                <li class="teclas"><button value="/" class="button-divisao">/</button></li>
-                                <li class="teclas"><button value="7" class="buttons">7</button></li>
-                                <li class="teclas"><button value="8" class="buttons">8</button></li>
-                                <li class="teclas"><button value="9" class="buttons">9</button></li>
-                                <li class="teclas"><button value="4" class="buttons">4</button></li>
-                                <li class="teclas"><button value="5" class="buttons">5</button></li>
-                                <li class="teclas"><button value="6" class="buttons">6</button></li>
-                                <li class="teclas"><button value="1" class="buttons">1</button></li>
-                                <li class="teclas"><button value="2" class="buttons">2</button></li>
-                                <li class="teclas"><button value="3" class="buttons">3</button></li>
-                                <li class="teclas"><button value="0" class="buttons-comprido">0</button></li>
-                                <li class="teclas"><button value="." class="buttons">.</button></li>
+                                <li class="teclas"><button data-all-clear value="Ac" class="button-Limpar">Ac</button></li>
+                                <li class="teclas"><button data-delete value="" class="button-Limpar"><i class="gg-backspace"></i></button></li>
+                                <li class="teclas"><button data-operador value="/" class="button-divisao">/</button></li>
+                                <li class="teclas"><button data-numero value="7" class="buttons">7</button></li>
+                                <li class="teclas"><button data-numero value="8" class="buttons">8</button></li>
+                                <li class="teclas"><button data-numero value="9" class="buttons">9</button></li>
+                                <li class="teclas"><button data-numero value="4" class="buttons">4</button></li>
+                                <li class="teclas"><button data-numero value="5" class="buttons">5</button></li>
+                                <li class="teclas"><button data-numero value="6" class="buttons">6</button></li>
+                                <li class="teclas"><button data-numero value="1" class="buttons">1</button></li>
+                                <li class="teclas"><button data-numero value="2" class="buttons">2</button></li>
+                                <li class="teclas"><button data-numero value="3" class="buttons">3</button></li>
+                                <li class="teclas"><button data-numero value="0" class="buttons-comprido">0</button></li>
+                                <li class="teclas"><button data-numero value="." class="buttons">.</button></li>
                                 
                             </ul>
                             
                             <ul class="operadores">
-                                <li class="teclas"><button value="*" class="operador">*</button></li>
-                                <li class="teclas"><button value="-" class="operador">-</button></li>
-                                <li class="teclas"><button value="+" class="operador-alto">+</button></li>
-                                <li class="teclas"><button value="=" class="operador-igual">=</button></li>
+                                <li class="teclas"><button data-operador value="*" class="operador">*</button></li>
+                                <li class="teclas"><button data-operador value="-" class="operador">-</button></li>
+                                <li class="teclas"><button data-operador value="+" class="operador-alto">+</button></li>
+                                <li class="teclas"><button data-igual value="=" class="operador-igual">=</button></li>
 
                             </ul>
 

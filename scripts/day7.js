@@ -1,36 +1,114 @@
-let e =document.querySelectorAll(".teclas [value ='e']");
-let µ =document.querySelectorAll(".teclas [value ='µ']");
-let sin =document.querySelectorAll(".teclas [value ='sin']");
-let deg =document.querySelectorAll(".teclas [value ='deg']");
-let Ac =document.querySelectorAll(".teclas [value ='Ac']");
-let apagar =document.querySelectorAll(".teclas [value ='']");
-let dividir =document.querySelectorAll(".teclas [value ='/']");
-let sete =document.querySelectorAll(".teclas [value =''7]");
-let oito =document.querySelectorAll(".teclas [value ='8']");
-let nove =document.querySelectorAll(".teclas [value ='9']");
-let quatro =document.querySelectorAll(".teclas [value ='4']");
-let cinco =document.querySelectorAll(".teclas [value ='5']");
-let seis =document.querySelectorAll(".teclas [value ='6']");
-let um =document.querySelectorAll(".teclas [value ='1']");
-let dois =document.querySelectorAll(".teclas [value ='2']");
-let tres =document.querySelectorAll(".teclas [value ='3']");
-let zero =document.querySelectorAll(".teclas [value ='0']");
-let ponto = document.querySelectorAll(".teclas [value ='.']");
-let *=document.querySelectorAll(".teclas [value ='*']");
-let igual =document.querySelectorAll(".teclas [value ='=']");
+const btnBotoes = document.querySelectorAll('[data-numero]');
+const btnEspeciais = document.querySelectorAll('[data-especiais]');
+const btnDeleteAll = document.querySelector('[data-all-clear]');
+const btnOperadores = document.querySelectorAll('[data-operador]');
+const btnIgual = document.querySelector('[data-igual]');
+const btnDelete = document.querySelector('[data-delete]');
+const operacaoAnterior_ElementoTexo = document.querySelector('[data-operacao-anterior]');
+const operacaoAtual_ElementoTexo = document.querySelector('[data-operacao-atual]');
+
+class Calcular{
+    constructor (operacaoAnterior_ElementoTexo, operacaoAtual_ElementoTexo ) {
+        this.operacaoAnterior_ElementoTexo = operacaoAnterior_ElementoTexo;
+        this.operacaoAtual_ElementoTexo = operacaoAtual_ElementoTexo;
+        this.clear();
+    }
+    
+    delete(){
+        this.operacaoAtual= this.operacaoAtual.toString().slice(0,-1);
+    }
+
+    calcule(){
+        let resultado;
+        const _operacaoAnterior = parseFloat(this.operacaoAnterior)
+        const _operacaoAtual = parseFloat(this.operacaoAtual)
 
 
+        if (isNaN(_operacaoAnterior) || isNaN (_operacaoAtual)) return;
 
-function soma (){
-    escrevernatela ();
+
+        switch (this.operacao) {
+            case '+':
+                resultado = _operacaoAnterior + _operacaoAtual;
+                break;
+            case '-':
+                resultado = _operacaoAnterior - _operacaoAtual;
+                break;
+            case '/':
+                resultado = _operacaoAnterior / _operacaoAtual;
+                break;
+            case '*':
+                resultado = _operacaoAnterior * _operacaoAtual;
+                break;    
+            default: 
+                return;               
+        }
+        this.operacaoAtual = resultado;
+        this.operacao = undefined;
+        this.operacaoAnterior = "";
+    }
+
+    escolherOperacao (operacao){
+        if(this.operacaoAtual ==""){
+            return;
+        }
+        if (this.operacaoAnterior !== ""){
+            this.calcule()
+
+        }
+        this.operacao = operacao;
+        this.operacaoAnterior = this.operacaoAtual;
+        this.operacaoAtual = "";
+
+    }
+    acrescentarNumero (numero) {
+        if (this.operacaoAtual.includes(".") && numero === ".") return;
+
+        this.operacaoAtual = `${this.operacaoAtual}${numero.toString()}`;
+    }
+    
+
+    clear (){
+        this.operacaoAtual = "";
+        this.operacaoAnterior = "";
+        this.operation = undefined;
+    }
+    atualizaTela (){
+        operacaoAnterior_ElementoTexo.innerText = `${this.operacaoAnterior} ${this.operacao || ""} `;
+        operacaoAtual_ElementoTexo.innerText = this.operacaoAtual;
+    }
+
 }
-function escrevernatela (){
 
 
+const calcular = new Calcular(
+    operacaoAnterior_ElementoTexo,
+    operacaoAtual_ElementoTexo
+);
 
-    let LocalResultado = document.querySelector("#Calc-Resultados")
-    let digito = document.querySelector(".buttons").textContent;
-
-    LocalResultado.innerHTML=digito;
+for (const btnBotao of btnBotoes) {
+    btnBotao.addEventListener("click", () => {
+        calcular.acrescentarNumero (btnBotao.innerText);
+        calcular.atualizaTela();
+    } )
 }
-oito.addEventListener("click", escrevernatela)
+for (const botaoOperador of btnOperadores) {
+    botaoOperador.addEventListener("click", () => {
+        calcular.escolherOperacao(botaoOperador.innerText);
+        calcular.atualizaTela();
+    })
+}
+
+
+btnDeleteAll.addEventListener("click", () => {
+    calcular.clear();
+    calcular.atualizaTela();
+})
+btnIgual.addEventListener("click", () => {
+    calcular.calcule();
+    calcular.atualizaTela();
+})
+btnDelete.addEventListener("click", () => {
+    calcular.delete();
+    calcular.atualizaTela();
+})
