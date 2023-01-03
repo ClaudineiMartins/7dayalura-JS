@@ -13,6 +13,10 @@ class Calcular{
         this.operacaoAtual_ElementoTexo = operacaoAtual_ElementoTexo;
         this.clear();
     }
+    formatarNumeroTela(numero){
+        const stringNumbero = numero.toString();
+        
+    }
     
     delete(){
         this.operacaoAtual= this.operacaoAtual.toString().slice(0,-1);
