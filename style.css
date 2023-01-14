@@ -3,6 +3,9 @@
     font-family: 'Poppins', sans-serif;
     
 }
+/* body {
+    height: 100vh;
+} */
 h1::selection{
     background: #F9FF00;
     color: #000;
